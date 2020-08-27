@@ -14,6 +14,8 @@
 - Download Jenkins 
 	- Check working by going to website
 	- Possible plugins needed
+	- Docker
+	- Github integration
 
 - Jenkins CI Job going
 	- Push from dev branch to master branch with automated tests
@@ -36,3 +38,19 @@
 - https://www.gfi.com/support/products/how-do-i-configure-an-user-account-to-have-logon-as-a-service-permissions
 - Download Java#
 ```https://java.com/en/download/win10.jsp```
+
+### Run Jenkins with war file
+
+```java -jar jenkins.war --httpPort=8080```
+
+- Login with credentials
+- May need to create if logging in for first time
+- In case of log in problems see below link
+
+```https://stackoverflow.com/questions/39340322/how-to-reset-the-use-password-of-jenkins-on-windows```
+
+### Download Jenkins Plugins
+
+
+- Plugin management is from manage jenkins > manage plugins
+- As per screenshot, may need to restart after installation
