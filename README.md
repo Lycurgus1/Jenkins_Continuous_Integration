@@ -34,3 +34,5 @@
 
 - Download Jenkins and run installer
 - https://www.gfi.com/support/products/how-do-i-configure-an-user-account-to-have-logon-as-a-service-permissions
+- Download Java#
+```https://java.com/en/download/win10.jsp```
