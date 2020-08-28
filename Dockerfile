@@ -35,21 +35,20 @@ EXPOSE 3000
 
 CMD ["node", "app.js"]
 
-=======
 # Use the base image
-FROM node AS app
+#FROM node AS new_app
 
 # Define the working DIR inside the container
-WORKDIR /usr/src/app
+#WORKDIR /usr/src/app
 
 # Copy dependencies - If you don't know go to the documentation
-COPY package*.json ./
+#COPY package*.json ./
 
 # Install npm
-RUN npm install
+#RUN npm install
 
 # Copy everything from OS to container
-COPY . .
+#COPY . .
 
 # Second stage of our build for production ~
 # multi stage Docker build
@@ -63,11 +62,11 @@ COPY . .
 #WORKDIR /usr/src/app
 
 # Open up the port (3000) - Default port of Node.JS 
-EXPOSE 3000
+#EXPOSE 3000
 
 # Start NPM
-CMD ["npm", "start"]
+#CMD ["npm", "start"]
 
 # RUN THE APP WTIH CMD
-CMD ["node","app.js"]
+#CMD ["node","app.js"]
 
