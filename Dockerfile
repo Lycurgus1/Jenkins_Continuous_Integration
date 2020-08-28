@@ -35,7 +35,6 @@ EXPOSE 3000
 
 CMD ["node", "app.js"]
 
-=======
 # Use the base image
 FROM node AS app
 
