@@ -56,8 +56,9 @@
 
 ### Create CI Job
 
-
-
-- 
+- Per configuration
+- Install npm and nodejs on OS
+- Edit package.json file test line
+```node ./node_modules/mocha/bin/_mocha```
 
 ### Create CD Job
