@@ -56,8 +56,11 @@
 
 ### Create CI Job
 
+- Per configuration
+- Install npm and nodejs on OS
+- Edit package.json file test line
+```node ./node_modules/mocha/bin/_mocha```
 
-
-- 
+- Killing process running. If port 3000 is in use, go into task task manager and end the node.js process
 
 ### Create CD Job
