@@ -43,7 +43,7 @@
 
 ```java -jar jenkins.war --httpPort=8080```
 
-- Login with credentials
+- Login with credentials at ```localhost:8080```
 - May need to create if logging in for first time
 - In case of log in problems see below link
 
@@ -51,6 +51,13 @@
 
 ### Download Jenkins Plugins
 
-
 - Plugin management is from manage jenkins > manage plugins
 - As per screenshot, may need to restart after installation
+
+### Create CI Job
+
+
+
+- 
+
+### Create CD Job
