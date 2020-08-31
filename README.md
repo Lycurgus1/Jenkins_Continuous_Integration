@@ -55,7 +55,7 @@
 
 ![image](images/CI_General.PNG)
 
-- Source Code management and build triggers per below
+- Source Code Management and Build Triggers per below
 
 ![image](images/CI_SCM.PNG)
 
@@ -78,8 +78,21 @@
 
 ### Create CD Job
 
-- Per configuration
-- Execute shell commands per below
+**Configuration**
+
+- General per below
+
+![image](images/CD_General.PNG)
+
+- Source Code Management and Build Triggers per below
+
+![image](images/CD_SCM.PNG)
+
+- Build Settings per below
+
+![image](images/CD_Build.PNG)
+
+- Shell commands
 ```
 docker build -t max476/app-wtih-integration:v3 .
 #docker run -d -p 3000:3000 max476/app-wtih-integration:v2
@@ -88,12 +101,27 @@ docker push max476/app-wtih-integration:v3
 
 ### Creating CD part 2 Job
 
-- Per configuriaton
-- Execute shell commands per below
+**Configuration**
+
+- General per below
+
+![image](images/CD2_General.PNG)
+
+- Source Code Management and Build Triggers per below
+
+![image](images/CD2_SCM.PNG)
+
+- Build Settings per below
+
+![image](images/CD2_Build.PNG)
+
+- Shell Commands
 ```
 docker pull max476/app-wtih-integration:v3
 docker run -d -p 3000:3000 max476/app-wtih-integration:v3
 ```
+**Other Steps**
+
 - Webhook to auto send email
 	- This is done on DockerHub, use a googlescript with the below script
 	- Add this to the webhook section on your repositry
@@ -120,24 +148,3 @@ function doPost(e) {
 4. Notification sent when the image is pushed to dockerhub
 	- (email sent to Shahrukh and yourself/group)
 	- Uses webhook on Dockerhub to trigger email being sent?
-
-## Plan
-
-- Download Jenkins 
-	- Check working by going to website
-	- Possible plugins needed
-	- Docker
-	- Github integration
-
-- Jenkins CI Job going
-	- Push from dev branch to master branch with automated tests
-	- SSH key access needed?
-
-- Jenkins CD Job
-	- Upon completion of previous job run docker build command
-	- Push image to dockerhub
-
-- Notification
-	- Part of CD job
-	- Webhook on dockerhub
-	- Emails sent out. 
