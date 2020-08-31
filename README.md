@@ -1,34 +1,15 @@
 # Docker Jenkins Task
 
-## Task
+## Dependencies
 
-1. Previous Job setup of CI from GitHub to Jenkins
-2. Jenkins will test code(previous tests) and if succesful trigger build on Docker
-3. Jenkins will trigger image to be pushed to dockerhub
-4. Notification sent when the image is pushed to dockerhub
-	- (email sent to Shahrukh and yourself/group)
-	- Uses webhook on Dockerhub to trigger email being sent?
+- Docker installed
+	- For more instructions see my previous repositry
 
-## Plan
+```https://github.com/Lycurgus1/Docker```
 
-- Download Jenkins 
-	- Check working by going to website
-	- Possible plugins needed
-	- Docker
-	- Github integration
+- Git bash installed
 
-- Jenkins CI Job going
-	- Push from dev branch to master branch with automated tests
-	- SSH key access needed?
-
-- Jenkins CD Job
-	- Upon completion of previous job run docker build command
-	- Push image to dockerhub
-
-- Notification
-	- Part of CD job
-	- Webhook on dockerhub
-	- Emails sent out. 
+```https://gitforwindows.org/```
 
 ## Steps
 
@@ -53,8 +34,13 @@
 
 - Plugin management is from manage jenkins > manage plugins
 - As per screenshot, may need to restart after installation
+
+![Jenkins_Plugin_Setup](images/Jenkins_Plugins.PNG)
+
 - You will need plugins for GitHub and Docker.
 	- There is multiple plugins for these
+
+![Jenkins_Plugin_Setup](images/Jenkins_Plugin.PNG)
 
 ### Create CI Job
 
@@ -103,3 +89,33 @@ function doPost(e) {
   
 }
 ```
+
+## Task
+
+1. Previous Job setup of CI from GitHub to Jenkins
+2. Jenkins will test code(previous tests) and if succesful trigger build on Docker
+3. Jenkins will trigger image to be pushed to dockerhub
+4. Notification sent when the image is pushed to dockerhub
+	- (email sent to Shahrukh and yourself/group)
+	- Uses webhook on Dockerhub to trigger email being sent?
+
+## Plan
+
+- Download Jenkins 
+	- Check working by going to website
+	- Possible plugins needed
+	- Docker
+	- Github integration
+
+- Jenkins CI Job going
+	- Push from dev branch to master branch with automated tests
+	- SSH key access needed?
+
+- Jenkins CD Job
+	- Upon completion of previous job run docker build command
+	- Push image to dockerhub
+
+- Notification
+	- Part of CD job
+	- Webhook on dockerhub
+	- Emails sent out. 
