@@ -64,3 +64,21 @@
 - Killing process running. If port 3000 is in use, go into task task manager and end the node.js process
 
 ### Create CD Job
+
+- Per configuration
+- Execute shell commands per below
+```
+docker build -t max476/app-wtih-integration:v3 .
+#docker run -d -p 3000:3000 max476/app-wtih-integration:v2
+docker push max476/app-wtih-integration:v3
+```
+
+### Creating CD part 2 Job
+
+- Per configuriaton
+- Execute shell commands per below
+```
+docker pull max476/app-wtih-integration:v3
+docker run -d -p 3000:3000 max476/app-wtih-integration:v3
+```
+- Webhook to auto send email?
