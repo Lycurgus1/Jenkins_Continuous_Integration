@@ -35,12 +35,12 @@
 - Plugin management is from manage jenkins > manage plugins
 - As per screenshot, may need to restart after installation
 
-![Jenkins_Plugin_Setup](images/Jenkins_Plugins.PNG)
+![Jenkins_Plugin_Setup](images/Jenkins_Plugin.PNG)
 
 - You will need plugins for GitHub and Docker.
 	- There is multiple plugins for these
 
-![Jenkins_Plugin_Setup](images/Jenkins_Plugin.PNG)
+![Jenkins_Plugins](images/jenkins_plugins.PNG)
 
 ### Create CI Job
 
