@@ -81,4 +81,20 @@ docker push max476/app-wtih-integration:v3
 docker pull max476/app-wtih-integration:v3
 docker run -d -p 3000:3000 max476/app-wtih-integration:v3
 ```
-- Webhook to auto send email?
+- Webhook to auto send email
+	- This is done on DockerHub, use a googlescript with the below script
+	- Add this to the webhook section on your repositry
+```
+function doGet(e){
+  return HtmlService.createHtmlOutput("request received");
+}
+
+function doPost(e) {
+    var emailAddress = 'MPalmer@spartaglobal.com'
+    var message = 'This is an email to show that Max has pushed a new image to his DockerHub'
+    var subject = 'Sending Emails From Google Scripts';
+    MailApp.sendEmail(emailAddress, subject, message);
+    return HtmlService.createHtmlOutput()("post request received");
+  
+}
+```
