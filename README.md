@@ -44,12 +44,34 @@
 
 ### Create CI Job
 
-- To trigger upon push
-	- Make sure the Github Plugin is installed
+**To trigger upon push**
 
-- Per configuration
+	- Make sure the Github Plugin is installed
+	- Not currently working
+
+**Configuration**
+
+- General per below
+
+![image](images/CI_General.PNG)
+
+- Source Code management and build triggers per below
+
+![image](images/CI_SCM.PNG)
+
+- Build settings per below
+
+![image](images/CI_Build.PNG)
+
+- Post Build Actions per below
+
+![image](images/CI_PostBuild.PNG)
+
+**Other Steps**
+
 - Install npm and nodejs on OS
 - Edit package.json file test line
+
 ```node ./node_modules/mocha/bin/_mocha```
 
 - Killing process running. If port 3000 is in use, go into task task manager and end the node.js process
