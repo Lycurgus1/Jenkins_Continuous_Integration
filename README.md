@@ -47,7 +47,6 @@
 **To trigger upon push**
 
 	- Make sure the Github Plugin is installed
-	- Not currently working
 
 **Configuration**
 
